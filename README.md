@@ -11,8 +11,9 @@ gem 'ruby_collections'
 ```
 
 And then execute:
-
-    $ bundle
+```console
+bundle
+```
 
 Or install it yourself as:
 
