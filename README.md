@@ -22,6 +22,8 @@ Or install it yourself as:
 
 Supported Data Structures: Max Heap, Min Heap
 
+```ruby
+
 max_heap = RubyCollections::MaxHeap.new
 
 max_heap.insert(1)
@@ -35,6 +37,8 @@ max_heap.min # => 1
 max_heap.extract_min # => 1
 
 max_heap.min # => 4
+
+```
 
 Similarly we can use MinHeap as well.
 
