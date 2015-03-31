@@ -34,11 +34,11 @@ max_heap.insert(4)
 
 max_heap.heap # => [nil, 1, 4]
 
-max_heap.min # => 1
+max_heap.max # => 4
 
-max_heap.extract_min # => 1
+max_heap.extract_max # => 4
 
-max_heap.min # => 4
+max_heap.max # => 1
 
 ```
 
