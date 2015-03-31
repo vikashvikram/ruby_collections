@@ -22,6 +22,8 @@ Or install it yourself as:
 
 Supported Data Structures: Max Heap, Min Heap
 
+### RubyCollections::MaxHeap
+
 ```ruby
 
 max_heap = RubyCollections::MaxHeap.new
