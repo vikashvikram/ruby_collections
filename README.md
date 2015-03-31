@@ -1,8 +1,6 @@
 # RubyCollections
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruby_collections`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to ruby_collections gem. This gem will provide you with an easy access to common data structures to be used in ruby language.
 
 ## Installation
 
@@ -22,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Supported Data Structures: Max Heap, Min Heap
+
+max_heap = RubyCollections::MaxHeap.new
+max_heap.insert(1)
+max_heap.insert(4)
+max_heap.heap # => [nil, 1, 4]
+max_heap.min # => 1
+max_heap.extract_min # => 1
+max_heap.min # => 4
+
+Similarly we can use MinHeap as well.
 
 ## Development
 
