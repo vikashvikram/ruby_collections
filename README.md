@@ -44,6 +44,24 @@ max_heap.max # => 1
 
 Similarly we can use MinHeap as well.
 
+### RubyCollections::Stack
+
+```ruby
+
+stack = RubyCollections::Stack.new
+
+stack.push(1) # => [1]
+
+stack.push(4) # => [4, 1]
+
+stack.top # => 4
+
+stack.pop # => 4
+
+stack.top # => 1
+
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
