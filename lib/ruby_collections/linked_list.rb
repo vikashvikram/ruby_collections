@@ -7,15 +7,18 @@ module RubyCollections
       @top = nil
     end
 
-    def isEmpty?
+    def empty?
       size.zero?
+    end
+
+    def header
+      @top ? @top.to_s : nil
     end
 
     def add(data, index = nil)
       return nil if index and index >= size
       if index
-        new_node = Node.new data, nil
-        get(index-1).setNext(new_node)
+        get(index-1).setNext(data)
       else
         node = Node.new(data, top)
         @top = node
@@ -37,6 +40,7 @@ module RubyCollections
     end
 
     def to_s
+      return "" if empty?
       data = []
       data << (node = top).data
       (size-1).times {data << (node = node.getNext).data}
@@ -55,8 +59,8 @@ module RubyCollections
         ObjectSpace._id2ref(@next)
       end
 
-      def setNext(node)
-        return if node.nil?
+      def setNext(data)
+        node = Node.new(data, nil)
         next_node_id = instance_variable_get(:@next)
         @next = node.object_id
         node.instance_variable_set(:@next, next_node_id)
@@ -69,5 +73,4 @@ module RubyCollections
     end
 
   end
-
 end

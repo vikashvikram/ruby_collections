@@ -70,7 +70,7 @@ list = RubyCollections::LinkedList.new
 
 list.size # => 0
 
-list.top # => nil
+list.header # => ""
 
 list.isEmpty? # => true
 
@@ -84,9 +84,17 @@ list.add(3,1) # => 3 (number of elements in list)
 
 list.to_s # => "[2, 3, 1]"
 
-list.remove(2) # => removes element at index 2
+list.remove(2) # => 2 (removes element at index 2)
 
 list.to_s # => "[2, 3]"
+
+list.get(1) # => 3 (returns element at index 1)
+
+list.get(1).setNext(12) # => adds a new node after index 1 with value 12. list is now [2, 3, 12]
+
+list.get(1).data = 5 # => changes the value at index 1. list is now [2, 5, 12]
+
+list.get(1).getNext # => 12
 
 ```
 
