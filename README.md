@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Supported Data Structures: Max Heap, Min Heap
+Supported Data Structures: Max Heap, Min Heap, Stack, LinkedList
 
 ### RubyCollections::MaxHeap
 
@@ -59,6 +59,34 @@ stack.top # => 4
 stack.pop # => 4
 
 stack.top # => 1
+
+```
+
+### RubyCollections::LinkedList
+
+```ruby
+
+list = RubyCollections::LinkedList.new
+
+list.size # => 0
+
+list.top # => nil
+
+list.isEmpty? # => true
+
+list.add(1) # => 1 (number of elements in list)
+
+list.add(2) # => 2 (number of elements in list)
+
+list.to_s # => "[2, 1]"
+
+list.add(3,1) # => 3 (number of elements in list)
+
+list.to_s # => "[2, 3, 1]"
+
+list.remove(2) # => removes element at index 2
+
+list.to_s # => "[2, 3]"
 
 ```
 
