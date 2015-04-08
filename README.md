@@ -72,7 +72,7 @@ list.size # => 0
 
 list.header # => ""
 
-list.isEmpty? # => true
+list.empty? # => true
 
 list.add(1) # => 1 (number of elements in list)
 
