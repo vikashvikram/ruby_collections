@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Supported Data Structures: Max Heap, Min Heap, Stack, LinkedList
+Supported Data Structures: Max Heap, Min Heap, Stack, LinkedList, Deque
 
 ### RubyCollections::MaxHeap
 
@@ -95,6 +95,64 @@ list.get(1).setNext(12) # => adds a new node after index 1 with value 12. list i
 list.get(1).data = 5 # => changes the value at index 1. list is now [2, 5, 12]
 
 list.get(1).getNext # => 12
+
+```
+
+### RubyCollections::Deque
+
+```ruby
+
+list = RubyCollections::Deque.new
+
+list.size # => 0
+
+list.head # => nil
+
+list.empty? # => true
+
+list.add(2) # => 1 (number of elements in list), list: [2]
+
+list.add(1) # => 2 (number of elements in list), list: [1,2]
+
+list.to_s # => "[1, 2]"
+
+# add 3 at index 1
+
+list.add(3,1) # => 3 (number of elements in list), list: [1, 3, 2]
+
+# add 5 at first postion
+
+list.add_first(5) # list: [5, 1, 3, 2]
+
+# see tail element
+
+list.tail # => 2
+
+#add 6 at last position
+
+list.add_last(6) # list: [5, 1, 3, 2, 6]
+
+list.size # => 5
+
+# get element at index 2
+
+list.get(2) # => 3
+
+# set element at index 1 to 10
+
+list.set(1, 10) # list; [5, 10, 3, 2, 6]
+
+# remove element at index 2
+
+list.remove(2) # list: [5, 10, 2, 6]
+
+# remove first element
+
+list.remove_first # list: [10, 2, 6]
+
+# remove last element
+
+list.remove_last # list: [10, 2]
 
 ```
 
