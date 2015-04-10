@@ -2,6 +2,9 @@ module RubyCollections
   class LinkedList
     attr_accessor :size, :top
 
+    #TODO: implement iterator
+    #TODO: implement to_a
+
     def initialize
       @size = 0
       @top = nil

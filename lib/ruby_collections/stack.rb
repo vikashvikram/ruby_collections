@@ -1,6 +1,9 @@
 module RubyCollections
   class Stack
 
+    #TODO: implement iterator
+    #TODO: implement to_a
+
     def initialize(arr = [])
       @arr = arr
     end

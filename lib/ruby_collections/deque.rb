@@ -2,6 +2,9 @@ require 'securerandom'
 module RubyCollections
   class Deque
 
+    #TODO: implement iterator
+    #TODO: implement to_a
+
     def initialize
       @hash = {size: 0, front: {data: nil, next: :rear, prev: nil}, 
               rear: {data: nil, next: nil, prev: :front}}
