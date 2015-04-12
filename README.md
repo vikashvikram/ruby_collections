@@ -164,13 +164,15 @@ list.remove_last # list: [10, 2]
 
 uf = RubyCollections::UnionFind.new (1..8).to_a 
 
-uf.union(1,3) # join 1 and 3
+uf.union(1,3) # joins 1 and 3 and returns the leader
 
-uf.union(5,6) # join 5 and 6
+uf.union(5,6) # joins 5 and 6 and returns the leader
 
-uf.union(2,4) # join 2 and 4
+uf.union(2,4) # joins 2 and 4 and returns the leader
 
-uf.union(1,7) # join 1 and 7
+uf.union(1,7) # joins 1 and 7 and returns the leader
+
+uf.find(7) # leader of the cluster containing 7
 
 uf.to_a  # => [[1, 3, 7], [2, 4], [5, 6], [8]] i.e. returns array of all clusters
 
