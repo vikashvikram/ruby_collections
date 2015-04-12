@@ -1,6 +1,6 @@
 # RubyCollections
 
-Welcome to ruby_collections gem. This gem will provide you with an easy access to common data structures to be used in ruby language.
+Welcome to ruby_collections gem. This gem will provide you with an easy access to common data structures to be used in Ruby Language.
 
 ## Installation
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Supported Data Structures: Max Heap, Min Heap, Stack, LinkedList, Deque
+Supported Data Structures: Max Heap, Min Heap, Stack, LinkedList, Deque, UnionFind
 
 ### RubyCollections::MaxHeap
 
@@ -153,6 +153,28 @@ list.remove_first # list: [10, 2, 6]
 # remove last element
 
 list.remove_last # list: [10, 2]
+
+```
+
+### RubyCollections::UnionFind
+
+```ruby
+
+# initialization takes an array argument. each element should have a to_s method defined which should return uniq val
+
+uf = RubyCollections::UnionFind.new (1..8).to_a 
+
+uf.union(1,3) # join 1 and 3
+
+uf.union(5,6) # join 5 and 6
+
+uf.union(2,4) # join 2 and 4
+
+uf.union(1,7) # join 1 and 7
+
+uf.to_a  # => [[1, 3, 7], [2, 4], [5, 6], [8]] i.e. returns array of all clusters
+
+uf.cluster(1) # => [1, 3, 7] i.e. returns all elements in same cluster as of 1
 
 ```
 
